@@ -1,0 +1,9 @@
+@use '../../scss/' as *;
+
+.header-page{
+      margin: 150px 0 20px 40px;
+      @include mobile{
+            background-color: black;
+            margin: 20px 0 5px 0;
+      }
+}

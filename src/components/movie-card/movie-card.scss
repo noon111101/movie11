@@ -1,0 +1,43 @@
+@use '../../scss/' as *;
+
+.movie-card {
+      position: relative;
+      font-family: $font-family;
+      background-position: top;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 5%;
+      height: 500px;
+      @include mobile{
+            height: 90px;
+      }
+      button{
+            z-index: 99;
+      }
+      img{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+      }
+      &:hover{
+            opacity: 80%;
+            transition: opacity 0.3s;
+      }
+      &:hover img{
+            opacity: 80%;
+            transition: opacity 0.3s;
+            transform: translate(-50%, -50%) scale(1);
+            transition: transform 0.5s;
+      }
+}
+.movie-card-title {
+      width: 300px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      @include mobile{
+            font-size: 5px;
+            width: 60px;
+      }
+}
